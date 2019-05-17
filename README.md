@@ -9,7 +9,7 @@ Import prune.py into your own pytorch code, and add a line `model = prune_model(
 ## Results
 I have tested this on a SSD object detection model with MobilenetV2 as its base. The model was trained/tested on a custom dataset, which cannot be made available. However, the results below will give a picture of the pruning's effects. It is seen that mAP and fps is maintained for pruning of a large portion of the parameters.  
   
-| prune factor | parameter count | mAP | fps |
+| factor_removed | parameter count | mAP | fps |
 |:-:|:-:|:-:|:-:|
 | baseline - 0.0 | 3,333,120 | 0.500 | 16.62 |
 | 0.3 | 3,238,764 | 0.502 | 16.39 |
