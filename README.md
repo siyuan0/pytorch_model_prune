@@ -3,7 +3,7 @@ Simple python code to prune pytorch model, by pruning each Conv2d layer in the m
 
 ![image](https://github.com/siyuan0/pytorch_model_prune/blob/master/example.png)
 
-This code is based on ideas from the paper 'Pruning Filters for Efficient ConvNets' by Hao Li, et al (https://arvix.org/abs/1608.08710). The code searches through a given pytorch model and prunes Conv2d layers by evaluating the weights of each channel and removing channels whose weights are close to zero. After that, an additional layer of zero_padding is added to ensure that the output tensor is of the correct dimensions.  
+This code is based on ideas from the paper 'Pruning Filters for Efficient ConvNets' by Hao Li, et al (https://arxiv.org/abs/1608.08710). The code searches through a given pytorch model and prunes Conv2d layers by evaluating the weights of each channel and removing channels whose weights are close to zero. After that, an additional layer of zero_padding is added to ensure that the output tensor is of the correct dimensions.  
 
 ## Usage
 Import prune.py into your own pytorch code, and add a line `model = prune_model(model, factor_removed=[PROPORTION OF CHANNELS YOU WANT TO REMOVE])` before you run your test. This pruning is to be called only after you have trained your model. The idea is to prune a trained model's parameters while maintaining its accuracy.
