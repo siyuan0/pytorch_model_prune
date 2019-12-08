@@ -9,7 +9,7 @@ This code is based on ideas from the paper 'Pruning Filters for Efficient ConvNe
 Import prune.py into your own pytorch code, and add a line `model = prune_model(model, factor_removed=[PROPORTION OF CHANNELS YOU WANT TO REMOVE])` before you run your test. This pruning is to be called only after you have trained your model. The idea is to prune a trained model's parameters while maintaining its accuracy.
 
 ## Results
-I have tested this on a SSD object detection model with MobilenetV2 as its base. The model was trained/tested on a custom dataset, which cannot be made available. However, the results below will give a picture of the pruning's effects. It is seen that mAP and fps is maintained for pruning of a large portion of the parameters.  
+I have tested this on a SSD object detection model with MobilenetV2 as its base. The model was trained/tested on a custom dataset, which cannot be made available. However, the results below will give a picture of the pruning's effects. It is seen that mAP and fps is maintained for pruning of a large portion of the parameters. The reason why the fps does not drop even when half the parameters are removed is likely due to the processor's inability to perform calculations involving zeros more efficiently. The significance of this pruning will likely be more obvious when running on customised processors that can handle zero calculations more efficiently.
   
 | factor_removed | parameter count | mAP | fps |
 |:-:|:-:|:-:|:-:|
