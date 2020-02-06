@@ -53,7 +53,7 @@ def unwrap_model(model):
 	return nn.ModuleList(layers)
 
 class zero_padding(nn.Module):
-	#my version of zero padding, pads up to givenn number of channels, at the specified index
+	#my version of zero padding, pads up to given number of channels, at the specified index
 	def __init__(self, num_channels, keep_channel_idx):
 		super(zero_padding, self).__init__()
 		self.num_channels = num_channels
