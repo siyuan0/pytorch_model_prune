@@ -1,5 +1,5 @@
 # pytorch_model_prune
-Simple python code to prune pytorch model, by pruning each Conv2d layer (Convolutional Neural Network - CNN) in the model  
+Simple python code to prune pytorch model, by pruning each Conv2d layer (Convolutional Neural Network - CNN) in the model. More information can be accessed on my medium article: https://towardsdatascience.com/pruning-convolutional-neural-networks-cae7986cbba8  
 
 ![image](https://github.com/siyuan0/pytorch_model_prune/blob/master/example.png)
 
